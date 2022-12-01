@@ -1,0 +1,42 @@
+include scroll-section
+
+section.benefits#benefits
+	+scroll([4, 5, 6, 7, 8], '#test', '#reviews')
+	.container
+		h2.benefits__title.title-big ПРЕИМУЩЕСТВА МАРАФОНА
+		p.benefits__desc.title 3 ПУНКТА ДЛЯ ДОСТИЖЕНИЯ ЦЕЛИ
+		.benefits__list
+			.benefits__item.benefit
+				.benefit__top
+					picture
+						source(srcset="img/benefit_1.webp", type="image/webp")
+						img.benefit__photo(src="img/benefit_1.jpg", alt="")
+				.benefit__bottom
+					h4.benefit__title КАПСУЛЫ DELISLIM
+					p.benefit__desc Уникальное средство для улучшения метаболизма и нормализации работы пищеварительной системы позволяет избавляться от лишних килограммов на длительный срок без повторного набора веса.
+			.benefits__item.benefit
+				.benefit__top
+					picture
+						source(srcset="img/benefit_2.webp", type="image/webp")
+						img.benefit__photo(src="img/benefit_2.jpg", alt="")
+				.benefit__bottom
+					h4.benefit__title ПЕРСОНАЛЬНЫЙ ПОДХОД
+					p.benefit__desc Участники марафона получают персональную программу похудения и тренировок, которая разрабатывается индивидуально для каждого, с учетом состояния здоровья, образа жизни, привычек и предпочтений.
+			.benefits__item.benefit
+				.benefit__top
+					picture
+						source(srcset="img/benefit_3.webp", type="image/webp")
+						img.benefit__photo(src="img/benefit_3.jpg", alt="")
+				.benefit__bottom
+					h4.benefit__title ПРОСТОЙ И ВКУСНЫЙ РАЦИОН
+					p.benefit__desc Для достижения результата вам не нужно кардинально менять образ жизни и сидеть на строгой диете. Вы получите легкий рацион без лишних затрат, плюс профессиональные рекомендации по питанию.
+		.benefits__bottom
+			.benefits__product
+				picture
+					source(srcset="img/prod.webp", type="image/webp")
+					img(src="img/prod.png", alt="DELISLIM")
+			.benefits__info
+				h4.benefits__test-title Пройди БЕСПЛАТНЫЙ ТЕСТ 
+				p.benefits__test-desc Получи рекомендации эксперта-диетолога
+				button.benefits__button.btn.js-scroll(data-target="#test") Пройти тест
+				

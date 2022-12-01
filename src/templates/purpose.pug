@@ -1,0 +1,49 @@
+include scroll-section
+
+section.purpose#purpose
+	+scroll([1, 2, 3, 4, 5], '#result', '#steps')
+	.container
+		.purpose__wrapper
+			.purpose__left
+				h2.purpose__title.title марафон похудения для каждого
+				.purpose__right.purpose__right--mob
+					p.purpose__subtitle
+						span Who
+						span Can
+						span use
+						span our
+						span Marafon?
+					.purpose__man-wrap
+						picture
+							source(srcset="img/man.webp", type="image/webp")
+							img.purpose__man(src="img/man.png", alt="")
+				ul.purpose__list.list-purpose
+					li.list-purpose__item.purpose__item
+						.list-purpose__photo-wrap
+							img.list-purpose__photo(src="img/svg/purpose_ico_1.svg", alt="ico")
+						.list-purpose__desc
+							h4.list-purpose__title ЖЕНЩИНЫ И МУЖЧИНЫ
+							p.list-purpose__text Программа марафона подходит для любого пола и возраста от 18 до 100 лет. Персональная программа дает возможность похудеть легко и эффективно
+					li.list-purpose__item.purpose__item
+						.list-purpose__photo-wrap
+							img.list-purpose__photo(src="img/svg/purpose_ico_2.svg", alt="ico")
+						.list-purpose__desc
+							h4.list-purpose__title ЛЮДИ С СОПУТСТВУЮЩИМИ ПАТОЛОГИЯМИ
+							p.list-purpose__text Нарушенный метаболизм, эндокринные нарушения, заболевания нервной системы часто являются причиной лишнего веса
+					li.list-purpose__item.purpose__item
+						.list-purpose__photo-wrap
+							img.list-purpose__photo(src="img/svg/purpose_ico_3.svg", alt="ico")
+						.list-purpose__desc
+							h4.list-purpose__title ЛЮДИ С НАСЛЕДСТВЕННОЙ ПРЕДРАСПО&shy;ЛОЖЕННОСТЬЮ
+							p.list-purpose__text Генетическая память играет ведущую роль в траектории набора массы тела. Эксперт научит управлять весом и контролировать обмен веществ
+			.purpose__right.purpose__right--desc
+				p.purpose__subtitle
+					span Who
+					span Can
+					span use
+					span our
+					span Marafon?
+				.purpose__man-wrap
+					picture
+						source(srcset="img/man.webp", type="image/webp")
+						img.purpose__man(src="img/man.png", alt="")

@@ -1,0 +1,22 @@
+include scroll-section
+
+section.kit#kit
+	+scroll([7, 8, 9, 1, 2], '#offers', '#promo')
+	.container
+		.kit__wrapper
+			h2.kit__title.title ОПТИМАЛЬНЫЙ НАБОР ДЛЯ ТЕЛА ТВОЕЙ МЕЧТЫ
+			ul.kit__list.list-kit
+				li.kit__item.list-kit__item
+					p.list-kit__title Капсулы Delislim:
+					p.list-kit__text Созданы на основе экстрактов гуавы, зеленого чая и горького апельсина. Содержат большое количество клетчатки, способны предотвращать поглощение жиров и ускорять метаболизм. Способствуют детоксикации и уменьшению чувства голода.
+				li.kit__item.list-kit__item
+					p.list-kit__title Блендер для смузи:
+					p.list-kit__text Портативное устройство для приготовления смузи из фруктов, овощей и ягод. Можно использовать в любом месте - на работе, в спортзале, в машине, во время прогулки. Заполните стакан ингредиентами, нажмите на кнопку - здоровый коктейль готов!
+				li.kit__item.list-kit__item
+					p.list-kit__title Коврик для йоги:
+					p.list-kit__text Легкий, прочный и износоустойчивый коврик для йоги - отличный помощник для занятий фитнесом. Нескользящая поверхность и увеличенная толщина позволяют заниматься спортом с максимальным комфортом и удовольствием.
+			.kit__photo
+				picture
+					source(srcset="img/kit_opty.webp", type="image/webp")
+					img(src="img/kit_opty.png", alt="")
+		button.kit__button.btn.js-show-popup(data-target="#popup-kit") Заказать

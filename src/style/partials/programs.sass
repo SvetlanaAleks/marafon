@@ -1,0 +1,170 @@
+.programs
+	padding-top: 90px
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0px
+		bottom: 0
+		height: 100%
+		width: 400px
+		transform: skewX(-11deg)
+		left: calc(50% - 86px)
+		background: linear-gradient(187.51deg,rgba(255,255,255,0) 7.95%,rgba(247,247,247,.8) 91.81%)
+		pointer-events: none
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		top: 30px
+		left: calc(50% - 1370px)
+		width: 526px
+		height: 526px
+		background: url('../img/svg/purpose_circle.svg') no-repeat center
+		background-size: 100%
+	+r(1219)
+		padding-top: 0px
+		&::before
+			display: none
+	&__wrapper
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		+r(1023)
+			display: block
+	&__left
+		max-width: 387px
+		width: 100%
+		+r(1023)
+			max-width: 100%
+			margin-bottom: 40px
+		+r(639)
+			margin-bottom: 30px
+		+r(479)
+			text-align: center
+			margin-bottom: 20px
+	&__title
+		margin-bottom: 43px
+		+r(1219)
+			margin-bottom: 30px
+		+r(1023)
+			margin-bottom: 20px
+		+r(639)
+			margin-bottom: 15px
+	&__desc
+		font-size: 16px
+		line-height: 24px
+		color: $ligth
+		width: 74%
+		+r(1023)
+			width: 100%
+		+r(479)
+			line-height: 22px
+	&__right
+		max-width: 850px
+		width: 100%
+		margin-top: 10px
+		z-index: 1
+		position: relative
+		+r(1380)
+			margin-top: 0
+		+r(1023)
+			max-width: 100%
+	
+
+.preview
+	background: $ligth
+	padding: 34px 40px 50px
+	text-align: center
+	+r(1219)
+		padding: 43px 30px
+	+r(1023)
+		padding: 30px
+	+r(767)
+		padding: 20px
+	+r(639)
+		padding: 15px
+	&__subtitle
+		font-weight: 700
+		font-size: 24px
+		line-height: 30px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: $darkGrey
+		margin-bottom: 52px
+		+r(1380)
+			margin-bottom: 45px
+		+r(1219)
+			font-size: 22px
+			line-height: 1.1
+			margin-bottom: 30px
+		+r(1023)
+			font-size: 20px
+		+r(767)
+			font-size: 18px
+			margin-bottom: 25px
+		+r(639)
+			margin-bottom: 15px
+		+r(479)
+			font-size: 16px
+	&__title
+		font-weight: 700
+		font-size: 50px
+		line-height: 50px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: $darkGrey
+		margin-bottom: 39px
+		+r(1380)
+			font-size: 48px
+		+r(1219)
+			margin-bottom: 30px
+			font-size: 45px
+		+r(1023)
+			font-size: 40px
+			line-height: 1.1
+		+r(767)
+			font-size: 36px
+		+r(639)
+			font-size: 30px
+			margin-bottom: 20px
+		+r(479)
+			font-size: 28px
+	&__buttons
+		display: flex
+		align-items: center
+		justify-content: center
+	&__button
+		display: block
+		max-width: 230px
+		width: 100%
+		text-align: center
+		background: none
+		border: 1px solid $pink
+		min-height: 66px
+		height: 66px
+		font-weight: 700
+		font-size: 24px
+		color: $darkGrey
+		cursor: pointer
+		font-family: 'Cabin', 'Roboto', Helvetica, sans-serif
+		transition: all .3s
+		+nlt
+			margin-right: 30px
+		&:hover, &.active
+			background: $pink
+			color: $white
+		+r(767)
+			min-height: 50px
+			height: 50px
+			font-size: 20px
+			+nlt
+				margin-right: 20px
+		+r(639)
+			min-height: 40px
+			height: 40px
+			font-size: 18px
+		+r(479)
+			+nlt
+				margin-right: 10px

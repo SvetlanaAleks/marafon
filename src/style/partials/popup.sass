@@ -1,0 +1,211 @@
+.popup-test
+	overflow-x: hidden
+	overflow-y: auto
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	position: fixed
+	z-index: 10
+	display: none
+	&.active
+		display: flex
+	&__close
+		position: absolute
+		top: 35px
+		right: 40px
+		width: 24px
+		height: 24px
+		cursor: pointer
+		+r(1023)
+			top: 10px
+			right: 10px
+			width: 20px
+			height: 20px
+	&__arrow
+		position: absolute
+		left: 40px
+		top: 35px
+		opacity: 0
+		&.active
+			cursor: pointer
+			opacity: 1
+		+r(1023)
+			top: 10px
+			left: 10px
+			width: 22px
+	&__wrap
+		position: relative
+		max-width: 915px
+		width: 100%
+		margin: auto
+		padding: 46px 40px 70px
+		background: $ligth
+		+r(1023)
+			max-width: 700px
+			padding: 40px
+		+r(767)
+			max-width: 610px
+		+r(639)
+			max-width: 95%
+			padding: 40px 25px 30px
+	&__content
+		overflow: hidden
+	&__progress
+		max-width: 700px
+		margin: 0 auto
+		margin-bottom: 45px
+		+r(767)
+			margin-bottom: 30px
+			max-width: 100%
+	&__step
+		display: none
+		&.active
+			display: block
+
+.step-test
+	&__title
+		font-weight: 700
+		font-size: 50px
+		line-height: 55px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: $darkGrey
+		text-align: center
+		margin-bottom: 35px
+		+r(1219)
+			font-size: 45px
+			line-height: 1.2
+		+r(1023)
+			font-size: 40px
+			line-height: 1.2
+			margin-bottom: 30px
+		+r(767)
+			font-size: 30px
+			margin-bottom: 20px
+		+r(639)
+			font-size: 26px
+		+r(479)
+			font-size: 22px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 45px
+		+r(1023)
+			margin-bottom: 30px
+		+r(479)
+			margin-bottom: 20px
+	&__checkbox
+		border: 1px solid transparentize(#FF0095, .5)
+		padding: 22px
+		max-width: 408px
+		width: 100%
+		display: flex
+		align-items: center
+		&:nth-of-type(-n+3)
+			max-width: 265px
+			margin-bottom: 21px
+		+r(1023)
+			max-width: 100%
+			padding: 15px
+			&:nth-of-type(-n+3)
+				max-width: 100%
+			+nlt
+				margin-bottom: 15px
+		+r(767)
+			padding: 10px
+			+nlt
+				margin-bottom: 10px
+	&__inputs
+		display: flex
+		justify-content: center
+		margin-bottom: 68px
+		+r(1023)
+			margin-bottom: 40px
+		+r(479)
+			margin-bottom: 20px
+			display: block
+	&__input-wrap
+		max-width: 334px
+		width: 100%
+		+nlt
+			margin-right: 40px
+		+r(1023)
+			max-width: 50%
+			+nlt
+				margin-right: 30px
+		+r(479)
+			max-width: 100%
+			+nlt
+				margin-right: 0
+				margin-bottom: 15px
+	&__label
+		font-size: 22px
+		line-height: 18px
+		color: $darkGrey
+		margin-bottom: 16px
+		text-align: center
+		display: block
+		+r(1023)
+			font-size: 18px
+			margin-bottom: 10px
+		+r(639)
+			font-size: 16px
+			margin-bottom: 5px
+	&__input
+		max-width: 100%
+		width: 100%
+		box-sizing: border-box
+		border: 1px solid $pink
+		height: 66px
+		padding: 10px
+		text-align: center
+		font-family: 'Cabin', 'Roboto', Helvetica, sans-serif
+		font-size: 22px
+		background: none
+		color: $darkGrey
+		+placeholder
+			text-transform: uppercase
+			color: #8C8C8C
+			font-size: 22px
+			font-family: 'Cabin', 'Roboto', Helvetica, sans-serif
+		+r(1023)
+			height: 50px
+			font-size: 18px
+			+placeholder
+				font-size: 18px
+	&__button
+		max-width: 260px
+		width: 100%
+		display: block
+		cursor: pointer
+		text-align: center
+		background: $pink
+		border: none
+		color: $white
+		line-height: 45px
+		height: 45px
+		font-weight: 700
+		font-size: 16px
+		font-family: 'Cabin', 'Roboto', Helvetica, sans-serif
+		text-transform: uppercase
+		margin: 0 auto
+		&:disabled
+			opacity: 0.5
+			cursor: no-drop
+
+
+.progress
+	width: 100%
+	background: #D9D9D9
+	height: 5px
+	position: relative
+	overflow: hidden
+	&__line
+		background: $pink
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		transition: all .3s

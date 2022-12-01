@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="css/main.css")
+    title MARAFON - не упусти шанс быть лучшей версией себя!
+  body
+    include templates/promo
+    .bg
+      include templates/result
+      include templates/purpose
+      include templates/steps
+    .bg2
+      include templates/programs
+      include templates/benefits
+      include templates/reviews
+    include templates/offers
+    include templates/kit
+    include templates/footer
+    
+    include templates/popup-kits
+    include templates/popup
+    .overlay.js-overlay
+
+
+
+
+    //- script(src="http://admin.rcktprft.ru/scripts-for-local-development/jquery.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
+    script(src="js/main.js")

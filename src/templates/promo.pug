@@ -1,0 +1,28 @@
+include scroll-section
+
+section.promo#promo
+	+scroll([8, 9, 1, 2, 3], '#kit', '#result')
+	img.promo__circle.promo__circle--1(src="img/svg/promo_circle_1.svg", alt="circle")
+	img.promo__circle.promo__circle--2(src="img/svg/promo_circle_2.svg", alt="circle")
+	img.promo__circle.promo__circle--3(src="img/svg/promo_circle_3.svg", alt="circle")
+	.promo__blur.promo__blur--pink.promo__blur--1
+	.promo__blur.promo__blur--pink.promo__blur--2
+	.promo__blur.promo__blur--blue.promo__blur--3
+	.promo__blur.promo__blur--blue.promo__blur--4
+	.container
+		.promo__top
+			.promo__info
+				h3.promo__subtitle.title не упусти шанс быть лучшей версией себя
+				p.promo__text
+					span Персональная программа похудения
+					|  для гармоничной потери веса
+			ul.promo__list.list-simple
+				li.promo__item.list-simple__item План питания
+				li.promo__item.list-simple__item План тренировок
+				li.promo__item.list-simple__item Капсулы Deilislim
+				li.promo__item.list-simple__item.list-simple__item--main ПОДАРКИ
+			h1.promo__title MАRАFON
+		.promo__bottom
+			h4.promo__test-title Пройди БЕСПЛАТНЫЙ ТЕСТ 
+			p.promo__test-desc Получи рекомендации эксперта-диетолога
+			button.promo__btn.btn.js-scroll(data-target="#test") Пройти тесТ

@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 352" width="352" height="352">
+	<title>oval-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m170.77 351.71c-97.1-2.84-173.51-83.74-170.66-180.68 2.84-96.94 83.86-173.22 180.95-170.37 71.28 2.09 131.41 46.24 157.23 107.92"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-width: 2;stroke-dasharray: 10 } 
+		.s1 { fill: #c00472 } 
+	</style>
+	<g id="Layer" style="opacity: .5">
+		<path id="Layer" class="s0" d="m176.1 1.6c96.4 0 174.5 78.1 174.5 174.5 0 96.4-78.1 174.5-174.5 174.5-96.4 0-174.5-78.1-174.5-174.5 0-96.4 78.1-174.5 174.5-174.5z"/>
+		<g id="Layer">
+			<g id="Clip-Path" clip-path="url(#cp1)">
+				<path id="Layer" class="s1" d="m170.7 354.7c-98.8-2.9-176.5-85.2-173.6-183.8l6 0.2c-2.8 95.3 72.3 174.8 167.8 177.6zm-173.6-183.8c2.9-98.6 85.3-176.1 184-173.2l-0.1 6c-95.5-2.8-175.1 72.1-177.9 167.4zm184-173.3c72.5 2.2 133.7 47.1 159.9 109.8l-5.5 2.3c-25.4-60.6-84.5-104-154.5-106.1z"/>
+			</g>
+		</g>
+	</g>
+</svg>

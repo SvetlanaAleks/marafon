@@ -1,0 +1,53 @@
+include scroll-section
+
+section.steps#steps
+	+scroll([2, 3, 4, 5, 6], '#purpose', '#test')
+	.steps__blur.steps__blur--pink.steps__blur--1
+	.steps__blur.steps__blur--pink.steps__blur--2
+	.container
+		h2.steps__title.title-big 5 шагов к идеальному телу
+		.steps__list
+			.step.steps__item
+				.step__photo-wrap
+					picture
+						source(srcset="img/step_photo_1.webp", type="image/webp")
+						img.step__photo(src="img/step_photo_1.png", alt="photo")
+				h4.step__title РЕГИСТРАЦИЯ В МАРАФОНЕ
+			.step.steps__item
+				.step__photo-wrap.step__photo-wrap--center
+					picture
+						source(srcset="img/step_photo_2.webp", type="image/webp")
+						img.step__photo(src="img/step_photo_2.png", alt="photo")
+				h4.step__title быстрый ТЕСТ ДИЕТОЛОГА
+			.step.steps__item
+				.step__photo-wrap.step__photo-wrap--center
+					ul.step__list.list-step
+						li.list-step__item
+							.list-step__wrap-ico
+								img.list-step__ico(src="img/step_ico_1.png", alt="ico")
+							p.list-step__text План питания
+						li.list-step__item
+							.list-step__wrap-ico
+								img.list-step__ico(src="img/step_ico_2.png", alt="ico")
+							p.list-step__text План тренировок
+						li.list-step__item
+							.list-step__wrap-ico
+								img.list-step__ico(src="img/step_ico_3.png", alt="ico")
+							p.list-step__text Витамины
+						li.list-step__item
+							.list-step__wrap-ico
+								img.list-step__ico(src="img/step_ico_4.png", alt="ico")
+							p.list-step__text Консульта&shy;ция
+				h4.step__title ПЕРСОНАЛЬНАЯ ПРОГРАММА ПОХУДЕНИЯ
+			.step.steps__item
+				.step__photo-wrap
+					picture
+						source(srcset="img/step_photo_4.webp", type="image/webp")
+						img.step__photo(src="img/step_photo_4.png", alt="photo")
+				h4.step__title участие в марафоне
+			.step.steps__item
+				.step__photo-wrap
+					picture
+						source(srcset="img/step_photo_5.webp", type="image/webp")
+						img.step__photo(src="img/step_photo_5.png", alt="photo")
+				h4.step__title ВПЕЧАТЛЯЮ&shy;ЩИЙ РЕЗУЛЬТАТ

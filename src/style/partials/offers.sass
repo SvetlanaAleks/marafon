@@ -1,0 +1,199 @@
+.offers
+	padding-bottom: 100px
+	background: linear-gradient(180deg, #291F41 0%, rgba(0, 0, 0, 0) 100%) no-repeat center bottom, url('../img/promo_bg.png') no-repeat center bottom
+	background-size: cover
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: -310px
+		left: calc(50% - -730px)
+		width: 526px
+		height: 526px
+		background: url('../img/svg/purpose_circle.svg') no-repeat center
+		background-size: 100%
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		left: -60px
+		right: -60px
+		bottom: -130px
+		background: #1A121A
+		filter: blur(50px)
+		height: 300px
+	+r(1380)
+		background-size: 1380px
+	+r(639)
+		padding-bottom: 80px
+		background-size: 640px
+		z-index: 1
+		&::after
+			z-index: -1
+	&__title
+		margin-bottom: 33px
+		+r(1380)
+			margin-bottom: 25px
+		+r(1023)
+			margin-bottom: 15px
+	&__subtitle
+		margin-bottom: 50px
+		+r(639)
+			margin-bottom: 20px
+	&__list
+		padding-bottom: 130px
+		+r(1023)
+			padding-bottom: 110px
+		+r(639)
+			padding-bottom: 80px
+	.slick-arrow
+		bottom: 0
+		span
+			transition: all .3s
+			font-size: 14px
+			text-align: center
+			letter-spacing: .25px
+			color: #fff
+			position: absolute
+			bottom: -24px
+			left: 50%
+			transform: translateX(-50%)
+			text-transform: capitalize
+		&.next
+			left: 51%
+		&.prev
+			right: 51%
+	.slick-slide
+		margin: 70px 27px 0
+		opacity: 0.5
+		transition: all .3s
+		&.slick-current
+			opacity: 1
+		+r(1219)
+			margin: 60px 15px 0
+		+r(639)
+			margin-top: 50px
+		+r(479)
+			margin-top: 30px
+
+.offer
+	position: relative
+	background: white
+	padding: 40px 50px 70px 50px
+	width: 730px
+	+r(1219)
+		padding: 40px 40px 60px 30px
+		width: 690px
+	+r(1023)
+		width: 510px
+		padding: 30px
+	+r(639)
+		width: 450px
+		padding: 20px
+	+r(479)
+		width: 290px
+	&__price
+		position: absolute
+		top: -70px
+		right: 0
+		background: $pink
+		box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2)
+		text-align: center
+		width: 180px
+		padding: 25px
+		+r(1219)
+			padding: 15px
+			width: 160px
+			top: -60px
+		+r(1023)
+			width: 140px
+			top: -50px
+		+r(479)
+			width: 100px
+			padding: 10px
+			top: -30px
+	&__price-value
+		font-weight: 700
+		font-size: 56px
+		line-height: 68px
+		letter-spacing: -0.5px
+		margin-bottom: 3px
+		+r(1219)
+			font-size: 50px
+			line-height: 1.2
+		+r(1023)
+			font-size: 44px
+		+r(479)
+			font-size: 32px
+	&__desc
+		color: rgba(255, 255, 255, 0.6)
+		font-size: 20px
+		line-height: 30px
+		font-weight: 500
+		+r(1023)
+			font-size: 18px
+			line-height: 1
+		+r(479)
+			font-size: 16px
+	&__title
+		font-weight: 500
+		font-size: 50px
+		line-height: 50px
+		letter-spacing: 0.25px
+		text-transform: uppercase
+		color: $darkGrey
+		margin-bottom: 40px
+		+r(1219)
+			font-size: 45px
+			line-height: 1
+			margin-bottom: 30px
+		+r(1023)
+			font-size: 40px
+		+r(639)
+			margin-bottom: 20px
+		+r(479)
+			font-size: 30px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+	&__item
+		position: relative
+		color: rgba(0, 0, 0, 0.87)
+		font-size: 16px
+		line-height: 17px
+		padding-left: 22px
+		width: 180px
+		margin-right: 20px
+		&:not(:nth-of-type(-n+3))
+			margin-top: 30px
+		span
+			font-weight: 700
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 5px
+			border-radius: 50%
+			background: $pink
+			width: 8px
+			height: 8px
+		+r(1023)
+			width: 46%
+			margin-right: 0
+			&:nth-of-type(odd)
+				margin-right: 15px
+			&:not(:nth-of-type(-n+2))
+				margin-top: 20px
+		+r(639)
+			width: 48%
+			&:not(:nth-of-type(-n+2))
+				margin-top: 10px
+		+r(479)
+			width: 100%
+			&:not(:nth-of-type(-n+1))
+				margin-top: 10px
+			&:nth-of-type(odd)
+				margin-right: 0

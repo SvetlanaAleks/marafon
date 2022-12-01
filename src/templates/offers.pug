@@ -1,0 +1,20 @@
+include data/offer
+
+mixin offer(offer)
+	.offer(data-slide-name=offer.title)
+		.offer__price
+			p.offer__price-value!= offer.price
+			p.offer__desc!= offer.desc
+		h4.offer__title!= offer.title
+		ul.offer__list
+			each item in offer.list
+				li.offer__item!= item
+
+
+section.offers#offers
+	.container
+		h2.offers__title.title-big Special OFFER
+		p.offers__subtitle.title Удобная онлайн платформа
+	.offers__list.js-offers-slider
+		each offer in offers
+			+offer(offer)

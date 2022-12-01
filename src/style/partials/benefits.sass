@@ -1,0 +1,215 @@
+.benefits
+	padding-top: 180px
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0px
+		bottom: 0
+		height: 100%
+		width: 400px
+		transform: skewX(-11deg) rotate(180deg)
+		left: calc(50% - 265px)
+		background: linear-gradient(187.91deg,rgba(255,255,255,0) 11.06%,#f7f7f7 148.9%)
+		pointer-events: none
+		z-index: -1
+		opacity: .5
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		top: 30px
+		left: calc(50% - -730px)
+		width: 526px
+		height: 526px
+		background: url('../img/svg/purpose_circle.svg') no-repeat center
+		background-size: 100%
+	+r(1380)
+		padding-top: 140px
+	+r(1219)
+		padding-top: 110px
+		&::before
+			width: 330px
+			left: calc(50% - 175px)
+	+r(1023)
+		padding-top: 70px
+		&::before
+			width: 250px
+			left: calc(50% - 235px)
+	+r(639)
+		padding-top: 50px
+		&::before
+			display: none
+	&__title
+		+r(1023)
+			margin-bottom: 15px
+	&__desc
+		max-width: 500px
+		width: 100%
+		line-height: 55px
+		margin-top: -50px
+		margin-left: auto
+		+r(1380)
+			max-width: 490px
+			margin-top: -60px
+		+r(1219)
+			max-width: 350px
+		+r(1023)
+			max-width: 100%
+			margin-top: 0
+			margin-bottom: 30px
+			line-height: 1
+	&__list
+		display: flex
+		justify-content: space-between
+		margin-bottom: 45px
+		+r(1023)
+			display: block
+			margin-bottom: 95px
+		+r(639)
+			margin-bottom: 40px
+	&__item
+		max-width: 400px
+		width: 100%
+		&:nth-of-type(2)
+			margin-top: 65px
+		&:nth-of-type(3)
+			margin-top: 150px
+		+r(1380)
+			max-width: 355px
+		+r(1219)
+			max-width: 315px
+			&:nth-of-type(2)
+				margin-top: 40px
+			&:nth-of-type(3)
+				margin-top: 80px
+		+r(1023)
+			max-width: 100%
+			&:nth-of-type(2), &:nth-of-type(3)
+				margin-top: 0
+			+nlt
+				margin-bottom: 30px
+	&__bottom
+		background: transparentize($darkPink, .5)
+		display: flex
+		align-items: center
+		padding: 27px 15px 27px 210px
+		position: relative
+		z-index: 1
+		+r(1219)
+			padding: 20px 20px 20px 180px
+		+r(639)
+			padding: 15px
+		+r(479)
+			display: block
+	&__product
+		position: absolute
+		bottom: 0
+		left: 35px
+		max-width: 140px
+		width: 100%
+		+r(1219)
+			width: 120px
+		+r(639)
+			position: static
+			display: block
+			margin-right: 10px
+		+r(479)
+			margin: 0 auto
+			margin-bottom: 10px
+	&__info
+		display: flex
+		align-items: center
+		flex: 1
+		+r(639)
+			display: block
+		+r(479)
+			text-align: center
+	&__test-title
+		color: $ligth
+		text-transform: uppercase
+		font-weight: 500
+		margin-right: 47px
+		font-size: 40px
+		letter-spacing: 0.02em
+		+r(1380)
+			font-size: 34px
+			margin-right: 30px
+		+r(1219)
+			font-size: 30px
+		+r(639)
+			font-size: 26px
+			margin-bottom: 10px
+			margin-right: 0
+	&__test-desc
+		width: 260px
+		color: $ligth
+		font-size: 16px
+		line-height: 22px
+		position: absolute
+		left: 210px
+		top: -70px
+		+r(1219)
+			left: 180px
+			top: -60px
+			width: 200px
+		+r(639)
+			width: auto
+			position: static
+			margin-bottom: 15px
+	&__button
+		margin-left: auto
+		max-width: 430px
+		+r(1380)
+			max-width: 280px
+		+r(639)
+			margin: 0
+		+r(479)
+			margin: 0 auto
+
+
+.benefit
+	+r(1023)
+		display: flex
+	+r(639)
+		display: block
+	&__top
+		font-size: 0
+	&__photo
+		width: 400px
+		height: 265px
+		+object-fit(cover)
+		+r(1380)
+			height: 220px
+		+r(1219)
+			height: 170px
+		+r(1023)
+			max-width: 250px
+		+r(767)
+			height: 175px
+		+r(639)
+			max-width: 100%
+			width: 100%
+			height: 225px
+		+r(479)
+			height: 185px
+	&__bottom
+		background: $pink
+		color: $ligth
+		padding: 20px 40px
+		+r(1380)
+			padding: 20px 30px
+		+r(1219)
+			padding: 15px
+	&__title
+		font-weight: 700
+		font-size: 18px
+		line-height: 18px
+		letter-spacing: 1px
+		text-transform: uppercase
+		margin-bottom: 10px
+	&__desc
+		font-size: 16px
+		line-height: 19px

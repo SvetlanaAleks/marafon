@@ -1,0 +1,89 @@
+mixin kit-item(kit)
+	.kit-item.js-kit(class=kit.active)
+		.kit-item__success.success.js-success
+			img.success__check(src="img/svg/check-success.svg", alt="")
+			p.success__text Спасибо!
+				br
+				| Ваш номер заказа: 
+			p.success__number #1234578
+			button.success__btn.js-close-success назад
+		.kit-item__block.js-block
+			.kit-item__photo
+				picture
+					source(srcset="img/" + kit.photo + '.webp', type="image/webp")
+					img(src="img/" + kit.photo + '.png', alt="")
+			h2.kit-item__title!= kit.title
+			ul.kit-item__list
+				each item in kit.list
+					li.kit-item__item!= item
+			button.kit-item__btn.kit-item__btn--hide.js-btn-form
+				span начать похудение
+				svg(width='26' height='16' viewBox='0 0 26 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path(d='M25.7071 8.70589C26.0976 8.31536 26.0976 7.6822 25.7071 7.29167L19.3431 0.927711C18.9526 0.537187 18.3195 0.537187 17.9289 0.927711C17.5384 1.31824 17.5384 1.9514 17.9289 2.34193L23.5858 7.99878L17.9289 13.6556C17.5384 14.0462 17.5384 14.6793 17.9289 15.0698C18.3195 15.4604 18.9526 15.4604 19.3431 15.0698L25.7071 8.70589ZM0 8.99878H25V6.99878H0V8.99878Z' fill='#111111')
+				span.price!= kit.price
+			form.form#form(action="https://api.apispreadsheets.com/data/E1kcni4VIq8y7oj4/" method="post")
+				.form__inputs
+					.form__input-wrap
+						label.form__label(for="#name") Ваше имя
+						input.form__input#name(type="text", name="name" placeholder="Name" required)
+					.form__input-wrap
+						label.form__label(for="#email") Ваш Email
+						input.form__input#email(type="email", name="email" placeholder="Email" required)
+				button.form__btn.kit-item__btn
+					span начать похудение
+					svg(width='26' height='16' viewBox='0 0 26 16' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M25.7071 8.70589C26.0976 8.31536 26.0976 7.6822 25.7071 7.29167L19.3431 0.927711C18.9526 0.537187 18.3195 0.537187 17.9289 0.927711C17.5384 1.31824 17.5384 1.9514 17.9289 2.34193L23.5858 7.99878L17.9289 13.6556C17.5384 14.0462 17.5384 14.6793 17.9289 15.0698C18.3195 15.4604 18.9526 15.4604 19.3431 15.0698L25.7071 8.70589ZM0 8.99878H25V6.99878H0V8.99878Z' fill='#111111')
+					span.price!= kit.price
+
+-
+	const kits = [
+		{
+			active: "",
+			price: "€80",
+			photo: "kit_basic",
+			title: "basic",
+			list: [
+				'Удобная онлайн-платформа',
+				'Длительность марафона - <span>4 недели</span>',
+				'<span>Доставка</span> инновационных продуктов для ускорения метаболизма <span>(1 шт)</span>',
+				'<span>11 тренировочных планов</span>, более <span>150 тренировок</span>'
+			]
+		},
+		{
+			active: "active",
+			price: "€120",
+			photo: "kit_opty",
+			title: "Standart",
+			list: [
+				'<span>Все что есть в плане Basic</span>',
+				'<span>20 тренировочных планов</span>, более <span>200 тренировок</span>',
+				'<span>Трекеры</span> полезных <span>привычек</span>',
+				'<span>Коврик</span> для занятий в подарок',
+				'<span>Доставка</span> инновационных продуктов для ускорения метаболизма <span>(2 шт)</span>',
+				'<span>Промокод</span> на витамины на <span>20 евро</span> (банка отдельно стоит минимум 40 евро)',
+			]
+		},
+		{
+			active: "",
+			price: "€180",
+			photo: "kit_pro",
+			title: "pro",
+			list: [
+				"<span>Все что есть в плане Standart</span>",
+				'<span>Доставка витаминного комплекса</span>',
+				'Более <span>8000</span> вкусных и полезных <span>рецептов</span>',
+				'<span>Подарок</span>',
+				'<span>Трекеры</span> полезных <span>привычек</span>, удобная система напоминаний',
+				'<span>Доставка</span> инновационных продуктов для ускорения метаболизма <span>(2 шт)</span>'
+			]
+		}
+	];
+
+.popup-kit.js-popup#popup-kit
+	.popup-kit__wrap
+		img.popup-kit__close.js-close(src="img/svg/close.svg", alt="close")
+		.popup-kit__content
+			h3.popup-kit__title Рекомендованый план для вас
+			.popup-kit__list
+				each item in kits
+					+kit-item(item)

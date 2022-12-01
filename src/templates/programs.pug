@@ -1,0 +1,16 @@
+include scroll-section
+
+section.programs#test
+	+scroll([3, 4, 5, 6, 7], '#steps', '#benefits')
+	.container
+		.programs__wrapper
+			.programs__left
+				h2.programs__title.title ПРОГРАММА ПОХУДЕНИЯ ПЕРСОНАЛЬНО ДЛЯ&nbsp;ВАС!
+				p.programs__desc Эксперт-диетолог разрабатывает программу с учетом сопутствующих заболеваний, образа жизни, привычек и предпочтений. Вы получите доступ к онлайн-платформе с простым интерфейсом для комфортного и легкого похудения.
+			.programs__right.preview
+				h4.preview__subtitle ПРОЙДИ БЫСТРЫЙ ТЕСТ И ПОЛУЧИ ПРОФЕССИОНАЛЬНЫЕ РЕКОМЕНДАЦИИ ОТ НАШЕГО ЭКСПЕРТА 
+				h3.preview__title СКОЛЬКО КГ ТЫ ХОЧЕШЬ СБРОСИТЬ?
+				.preview__buttons
+					button.preview__button.js-show-popup(data-target="#popup-test") 5+
+					button.preview__button.js-show-popup(data-target="#popup-test") 10+
+					button.preview__button.js-show-popup(data-target="#popup-test") 15+

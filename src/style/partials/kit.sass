@@ -1,0 +1,117 @@
+.kit
+	position: relative
+	z-index: 1
+	padding-top: 140px
+	padding-bottom: 15px
+	+r(1380)
+		padding-top: 80px
+	+r(1023)
+		padding-top: 0
+	&__wrapper
+		border: 3px solid #C00472
+		box-shadow: 0px 0px 18px 8px #BB3381
+		padding: 50px 60px 70px
+		margin-bottom: 65px
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		+r(1219)
+			padding: 40px 50px 60px
+		+r(1023)
+			padding: 40px
+			display: block
+		+r(639)
+			padding: 20px
+			margin-bottom: 45px
+		+r(479)
+			padding: 15px
+	&__title
+		width: 100%
+		margin-bottom: 40px
+		letter-spacing: -1.2px
+		+r(639)
+			margin-bottom: 30px
+	&__list
+		max-width: 570px
+		width: 100%
+		+r(1380)
+			max-width: 510px
+		+r(1219)
+			max-width: 450px
+		+r(1023)
+			max-width: 100%
+			margin-bottom: 30px
+	&__item
+		+nlt
+			margin-bottom: 45px
+		+r(1219)
+			+nlt
+				margin-bottom: 35px
+		+r(1023)
+			+nlt
+				margin-bottom: 20px
+	&__photo
+		position: absolute
+		bottom: -80px
+		right: 100px
+		+r(1380)
+			bottom: -70px
+			right: 50px
+			max-width: 450px
+		+r(1219)
+			max-width: 390px
+		+r(1023)
+			position: static
+			max-width: 310px
+			margin: 0 auto
+		+r(639)
+			max-width: 230px
+		+r(479)
+			max-width: 200px
+	&__button
+		max-width: 257px
+		margin: 0 auto
+		+r(1380)
+			max-width: 280px
+
+.list-kit
+	&__item
+		position: relative
+		padding-left: 45px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 8px
+			width: 11px
+			height: 11px
+			border-radius: 50%
+			background: $pink
+		+r(1219)
+			padding-left: 35px
+		+r(639)
+			padding-left: 25px
+		+r(479)
+			padding-left: 20px
+			&::after
+				width: 8px
+				height: 8px
+	&__title
+		font-weight: 500
+		font-size: 22px
+		line-height: 27px
+		letter-spacing: 0.25px
+		margin-bottom: 25px
+		+r(1219)
+			margin-bottom: 15px
+		+r(1023)
+			margin-bottom: 10px
+		+r(639)
+			font-size: 20px
+			line-height: 1.2
+		+r(479)
+			font-size: 18px
+	&__text
+		font-size: 16px
+		line-height: 22px

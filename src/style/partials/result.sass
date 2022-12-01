@@ -1,0 +1,158 @@
+.result
+	padding-top: 106px
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0px
+		bottom: 0
+		height: 88%
+		width: 400px
+		transform: skewX(11deg)
+		left: calc(50% - 100px)
+		background: linear-gradient(187.91deg, rgba(255, 255, 255, 0) 4.63%, #F7F7F7 87.9%)
+		opacity: 0.8
+		z-index: 0
+		pointer-events: none
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		left: -60px
+		right: -60px
+		top: -80px
+		background: #2C152C
+		filter: blur(50px)
+		height: 165px
+	+r(1380)
+		&::after
+			filter: blur(40px)
+			top: -80px
+	+r(1219)
+		&::before
+			width: 330px
+	+r(1023)
+		padding-top: 75px
+		&::before
+			width: 250px
+			transform: skewX(8deg)
+			left: calc(50% - 10px)
+			height: 84%
+	+r(639)
+		padding-top: 50px
+		&::before
+			display: none
+	&__blur
+		position: absolute
+		filter: blur(125px)
+		border-radius: 50%
+		&--pink
+			background: #C00472
+		&--blue
+			background: #5AC7E1
+		&--1
+			width: 283px
+			height: 283px
+			top: 180px
+			left: calc(50% - 920px)
+		&--2
+			width: 200px
+			height: 200px
+			top: 170px
+			left: calc(50% - -840px)
+	&__title
+		max-width: 470px
+		width: 100%
+		position: relative
+		z-index: 1
+		+r(1219)
+			max-width: 290px
+		+r(1023)
+			max-width: 100%
+			margin-bottom: 30px
+	&__list
+		margin-top: -140px
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+		+r(1023)
+			margin-top: 0
+			justify-content: space-between
+		+r(479)
+			display: block
+	&__item
+		font-size: 0
+		padding-top: 35px
+		padding-right: 35px
+		position: relative
+		display: inline-block
+		z-index: 1
+		flex-shrink: 0
+		&--1
+			margin-top: 280px
+		&--2
+			margin-left: -170px
+			margin-top: 60px
+		&--3
+			margin-left: auto
+		&--4
+			margin-left: 560px
+			margin-top: -210px
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 35px
+			left: 85px
+			box-shadow: 0px 0px 18px 8px #BB3381
+			border: 3px solid #C00472
+			z-index: -1
+			pointer-events: none
+		+r(1380)
+			max-width: 405px
+			padding-right: 25px
+			padding-top: 25px
+			&--1
+				margin-top: 310px
+			&--2
+				margin-left: -110px
+			&--4
+				margin-left: 510px
+				margin-top: -190px
+				max-width: 450px
+		+r(1219)
+			padding-right: 20px
+			padding-top: 20px
+			max-width: 345px
+			&--1
+				max-width: 400px
+			&--2
+				margin-left: -130px
+				margin-top: 80px
+			&--4
+				margin-left: 440px
+				margin-top: -170px
+				max-width: 400px
+		+r(1023)
+			max-width: 48%
+			padding-right: 15px
+			padding-top: 15px
+			&--1, &--4
+				max-width: 48%
+			&--1, &--2, &--3, &--4
+				margin: 0
+			&:nth-of-type(-n+2)
+				margin-bottom: 40px
+		+r(639)
+			&::before
+				left: 20px
+				bottom: 20px
+		+r(479)
+			max-width: 320px
+			margin: 0 auto
+			display: block
+			+nlt
+				margin-bottom: 30px

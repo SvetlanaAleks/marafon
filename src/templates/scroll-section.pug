@@ -1,0 +1,13 @@
+
+
+mixin scroll(array, prevTarget, nextTarget)
+	.scroll
+		.scroll__arrow.scroll__arrow--prev.js-scroll(data-target=prevTarget)
+			svg(width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M12.4999 0.949219L0.808594 21.1992H24.1913L12.4999 0.949219ZM12.4999 2.94922L2.54064 20.1992H22.4592L12.4999 2.94922Z" fill="#D90080")
+		ul.scroll__list
+			each item in array
+				li= item
+		.scroll__arrow.scroll__arrow--next.js-scroll(data-target=nextTarget)
+			svg(width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+				path(fill-rule="evenodd" clip-rule="evenodd" d="M12.5001 20.9492L24.1914 0.699219L0.808721 0.699217L12.5001 20.9492ZM12.5001 18.9492L22.4594 1.69922L2.54077 1.69922L12.5001 18.9492Z" fill="#D90080")

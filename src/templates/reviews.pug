@@ -1,0 +1,52 @@
+include scroll-section
+
+mixin review(item)
+	.review
+		p.review__desc!= item.desc
+		.review__bottom
+			.review__photo
+				picture
+					source(srcset='img/'+item.src+'.webp', type="image/webp")
+					img(src='img/'+item.src+'.jpg', alt=item.name)
+			.review__info
+				p.review__name!= item.name
+				p.review__text!= item.text
+
+-
+	const reviews = [
+		{
+			desc: "Поздравляю участников марафона, которые смогли похудеть! Все такие красивые! Мне тоже удалось похудеть на 15 кг, и это при том, что у меня серьезный гормональный дисбаланс. Подход профессиональный, я счастлива!",
+			src: "review_1",
+			name: "Jane Cooper",
+			text: "35 years old"
+		},
+		{
+			desc: "Я так вкусно никогда не питалась! Спасибо диетологу за великолепные диетические рецепты. Трачу минимум времени и уже вижу минус 2,5 кг на весах! Спасибо Delislim!!!",
+			src: "review_2",
+			name: "kate jones",
+			text: "42 years old"
+		},
+		{
+			desc: "Поздравляю участников марафона, которые смогли похудеть! Все такие красивые! Мне тоже удалось похудеть на 15 кг, и это при том, что у меня серьезный гормональный дисбаланс. Подход профессиональный, я счастлива!",
+			src: "review_1",
+			name: "Jane Cooper",
+			text: "35 years old"
+		},
+		{
+			desc: "Я так вкусно никогда не питалась! Спасибо диетологу за великолепные диетические рецепты. Трачу минимум времени и уже вижу минус 2,5 кг на весах! Спасибо Delislim!!!",
+			src: "review_2",
+			name: "kate jones",
+			text: "42 years old"
+		}
+	];
+
+section.reviews#reviews
+	+scroll([5, 6, 7, 8, 9], '#benefits', '#offers')
+	.reviews__blur.reviews__blur--pink.reviews__blur--1
+	.container
+		.reviews__top
+			h2.reviews__title.title-big ОТЗЫВЫ
+			p.reviews__desc.title Истории успеха участников марафона
+		.reviews__list.js-reviews-slider
+			each item in reviews
+				+review(item)

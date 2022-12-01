@@ -1,0 +1,375 @@
+.popup-kit
+	overflow-x: hidden
+	overflow-y: auto
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	position: fixed
+	z-index: 10
+	display: none
+	&.active
+		display: flex
+	&__close
+		position: absolute
+		top: 0px
+		right: 0px
+		width: 24px
+		height: 24px
+		padding: 10px
+		border-radius: 5px
+		background: white
+		cursor: pointer
+		box-sizing: content-box
+		+r(1023)
+			width: 15px
+			height: 15px
+			padding: 5px
+		+r(767)
+			top: 5px
+			right: 5px
+	&__wrap
+		position: relative
+		max-width: 1240px
+		width: 100%
+		margin: auto
+		text-align: center
+		+r(1380)
+			max-width: 1140px
+		+r(1023)
+			max-width: 740px
+		+r(767)
+			padding: 40px 15px
+	&__title
+		font-size: 50px
+		line-height: 55px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		margin-bottom: 100px
+		border: 3px solid #C00472
+		box-shadow: 0px 0px 18px 8px #BB3381
+		text-align: center
+		display: inline-block
+		font-weight: 700
+		padding: 10px 20px
+		+r(1380)
+			font-size: 48px
+		+r(1023)
+			font-size: 33px
+			padding: 10px
+			line-height: 1
+			margin-bottom: 40px
+		+r(767)
+			font-size: 30px
+		+r(639)
+			font-size: 22px
+			margin-bottom: 20px
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+		+r(1023)
+			display: block
+
+
+.kit-item
+	max-width: 405px
+	width: 100%
+	background: white
+	padding: 195px 20px 20px
+	position: relative
+	+nlt
+		margin-right: 20px
+	.form
+		display: none
+	&.order
+		padding-top: 20px
+		.form
+			display: block
+		.kit-item
+			&__photo
+				display: none
+			&__btn
+				&--hide
+					display: none
+	&.active
+		background: $pink
+		.kit-item
+			&__title, &__item
+				color: white
+			&__item
+				&::after
+					background: white
+	+r(1380)
+		padding-top: 175px
+	+r(1023)
+		max-width: 100%
+		padding: 20px
+		padding-left: 170px
+		+nlt
+			margin-right: 0
+			margin-bottom: 20px
+		&:nth-of-type(3)
+			padding-left: 310px
+		&.order
+			padding: 20px
+			.form
+				max-width: 400px
+				width: 100%
+				margin: 0 auto
+				button
+					max-width: 100%
+	+r(767)
+		padding-left: 120px
+		&:nth-of-type(3)
+			padding-left: 220px
+			.kit-item__photo
+				height: 130px
+	+r(639)
+		padding: 15px
+		padding-left: 100px
+		+nlt
+			margin-bottom: 10px
+		&:nth-of-type(3)
+			padding-left: 170px
+			.kit-item__photo
+				height: 100px
+		&.order
+			padding: 15px
+	+r(479)
+		padding: 15px
+		&:nth-of-type(1)
+			.kit-item__item
+				&:nth-of-type(-n+2)
+					width: 70%
+			.kit-item__photo
+				height: 100px
+		&:nth-of-type(2)
+			.kit-item__item
+				&:nth-of-type(-n+2)
+					width: 70%
+			.kit-item__photo
+				height: 120px
+		&:nth-of-type(3)
+			padding: 15px
+			.kit-item__item
+				&:nth-of-type(-n+2)
+					width: 52%
+			.kit-item__photo
+				height: 95px
+		&.order
+			&:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+				.kit-item__item
+					width: 100%
+	&__block
+		+r(1023)
+			display: flex
+			flex-wrap: wrap
+	&__success
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		z-index: 1
+		display: none
+	&__photo
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		width: 100%
+		height: 250px
+		top: -70px
+		img
+			height: 100%
+		+r(1380)
+			height: 230px
+		+r(1023)
+			height: 180px
+			left: 20px
+			transform: none
+			width: auto
+			top: 20px
+		+r(767)
+			height: 150px
+			left: 10px
+		+r(639)
+			height: 120px
+		+r(479)
+			position: absolute
+			top: 10px
+			right: 10px
+			left: auto
+	&__title
+		font-size: 40px
+		text-align: center
+		color: #111111
+		margin-bottom: 30px
+		text-transform: capitalize
+		+r(1023)
+			font-size: 34px
+			margin-bottom: 20px
+		+r(767)
+			font-size: 30px
+			margin-bottom: 15px
+		+r(639)
+			font-size: 26px
+			margin-bottom: 10px
+		+r(479)
+			width: 100%
+			text-align: left
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		text-align: left
+		justify-content: space-between
+		margin-bottom: 35px
+		+r(1023)
+			margin-bottom: 25px
+		+r(767)
+			margin-bottom: 20px
+		+r(639)
+			margin-bottom: 15px
+	&__item
+		position: relative
+		color: rgba(0, 0, 0, 0.87)
+		font-size: 13px
+		line-height: 14px
+		font-weight: 500
+		padding-left: 20px
+		width: calc(100%/2 - 20px)
+		&:nth-of-type(even)
+			margin-right: 20px
+		&:not(:nth-of-type(-n+2))
+			margin-top: 24px
+		span
+			font-weight: 700
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 5px
+			border-radius: 50%
+			background: $pink
+			width: 7px
+			height: 7px
+		+r(1023)
+			&:nth-of-type(even)
+				margin-right: 0
+			&:nth-of-type(odd)
+				margin-right: 15px
+			&:not(:nth-of-type(-n+2))
+				margin-top: 15px
+		+r(767)
+			&:not(:nth-of-type(-n+2))
+				margin-top: 10px
+		+r(639)
+			width: 100%
+			&:not(:nth-of-type(-n+1))
+				margin-top: 10px
+			&:nth-of-type(even), &:nth-of-type(odd)
+				margin-right: 0
+	&__btn
+		max-width: 100%
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border: none
+		font-family: 'Roboto', 'Cabin', Helvetica, sans-serif
+		background: #6DDA00
+		height: 42px
+		line-height: 42px
+		padding: 0 22px
+		text-transform: uppercase
+		color: #111111
+		font-size: 16px
+		font-weight: 700
+		cursor: pointer
+		transition: all .3s
+		.price
+			font-size: 35px
+		&.disabled
+			background: #A7A7A7
+			color: white
+			svg path
+				fill: #fff
+			&:hover
+				background: #6DDA00
+				color: #111111
+				svg path
+					fill: #111111
+		+r(1023)
+			max-width: 340px
+		+r(639)
+			height: 35px
+			line-height: 35px
+			padding: 0 15px
+			font-size: 14px
+			svg
+				display: none
+			.price
+				font-size: 28px
+
+
+
+.form
+	&__label
+		display: block
+		font-size: 16px
+		line-height: 18px
+		margin-bottom: 6px
+	&__inputs
+		margin-bottom: 23px
+	&__input-wrap
+		+nlt
+			margin-bottom: 11px
+	&__input
+		max-width: 100%
+		width: 100%
+		display: block
+		box-sizing: border-box
+		text-align: center
+		height: 42px
+		padding: 0 10px
+		border: none
+		font-size: 16px
+		+placeholder
+			color: #8C8C8C
+			font-family: 'Roboto', 'Cabin', Helvetica, sans-serif
+			font-size: 16px
+
+
+.success
+	background: $pink
+	// display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&.active
+		display: flex
+	&__check
+		margin-bottom: 20px
+	&__text
+		font-size: 30px
+		line-height: 1
+		margin-bottom: 20px
+	&__number
+		font-size: 45px
+		margin-bottom: 54px
+	&__btn
+		max-width: 215px
+		width: 100%
+		margin: 0 auto
+		border: none
+		cursor: pointer
+		background: white
+		text-align: center
+		text-transform: uppercase
+		height: 42px
+		line-height: 42px
+		font-weight: 700
+		color: #111111
+		font-size: 16px

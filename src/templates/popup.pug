@@ -1,0 +1,71 @@
+.popup-test.js-popup#popup-test
+	.popup-test__wrap
+		img.popup-test__close.js-close(src="img/svg/close.svg", alt="close")
+		img.popup-test__arrow.js-btn-prev-step(src="img/svg/arrow.svg", alt="arrow")
+		.popup-test__content
+			.popup-test__progress.progress
+				.progress__line.js-progress
+			.popup-test__step.step-test.js-step-test.active
+				h3.step-test__title What are your main goals right now?
+				.step-test__list
+					.step-test__checkbox
+						.checkbox
+							label.checkbox__label Lose weight
+								input.checkbox__input(type="checkbox")
+								span.checkbox__checkmark
+									img(src="img/svg/check.svg", alt="check")
+					.step-test__checkbox
+						.checkbox
+							label.checkbox__label Get help with meal planning
+								input.checkbox__input(type="checkbox")
+								span.checkbox__checkmark
+									img(src="img/svg/check.svg", alt="check")
+					.step-test__checkbox
+						.checkbox
+							label.checkbox__label Find help from experts
+								input.checkbox__input(type="checkbox")
+								span.checkbox__checkmark
+									img(src="img/svg/check.svg", alt="check")
+					.step-test__checkbox
+						.checkbox
+							label.checkbox__label Improve my overall health 
+								input.checkbox__input(type="checkbox")
+								span.checkbox__checkmark
+									img(src="img/svg/check.svg", alt="check")
+					.step-test__checkbox
+						.checkbox
+							label.checkbox__label Treat a specific health condition
+								input.checkbox__input(type="checkbox")
+								span.checkbox__checkmark
+									img(src="img/svg/check.svg", alt="check")
+				button.step-test__button.js-btn-next-step(disabled) Continue
+			.popup-test__step.step-test.js-step-test
+				h3.step-test__title What is your Age & High?
+				.step-test__inputs
+					.step-test__input-wrap
+						label.step-test__label Year of birth
+						input.step-test__input#year(type="text", name="year" placeholder="YYYY")
+					.step-test__input-wrap
+						label.step-test__label Height
+						input.step-test__input#height(type="text", name="height" placeholder="sm")
+				button.step-test__button.js-btn-next-step(disabled) Continue
+			.popup-test__step.step-test.js-step-test
+				h3.step-test__title What is your goal weight?
+				.step-test__inputs
+					.step-test__input-wrap
+						label.step-test__label Current weight
+						input.step-test__input(type="text", name="current_weight" placeholder="kg")
+					.step-test__input-wrap
+						label.step-test__label Goal weight
+						input.step-test__input(type="text", name="goal_weight" placeholder="kg")
+				button.step-test__button.js-btn-next-step(disabled) Continue
+			.popup-test__step.step-test.js-step-test
+				h3.step-test__title Введите ваши данные
+				.step-test__inputs
+					.step-test__input-wrap
+						label.step-test__label Ваше имя
+						input.step-test__input(type="text", name="name" placeholder="name")
+					.step-test__input-wrap
+						label.step-test__label Ваш Email
+						input.step-test__input(type="email", name="email" placeholder="e-mail")
+				button.step-test__button.js-show-popup(data-target="#popup-kit" disabled) Continue
